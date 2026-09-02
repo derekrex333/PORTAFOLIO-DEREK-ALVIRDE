@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Portafolio Derek A.</title>
+</head>
+
+<body class="light">
+    <nav>
+        <ul>
+            <li><a href="#inicio">INICIO</a></li>
+            <li><a href="#sobre-mi">SOBRE MI</a></li>
+            <li><a href="#cursos">CURSOS</a></li>
+            <li><a href="#proyectos">PROYECTOS</a></li>
+            <li><a href="#contactame">CONTÁCTAME</a></li>
+            <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                <span class="toggle-slider">☀️</span>
+            </button>
+        </ul>
+    </nav>
+
+    <section class="hero" id="inicio">
+        <div>
+            <canvas id="neural-canvas"></canvas>
+            <h1>DEREK ALVIRDE</h1>
+            <p class="intro">
+                Data Science Student specializing in Data Analysis,
+                Statistical Modeling and Machine Learning.
+            </p>
+
+            <button class="cta-button"
+                onclick="document.getElementById('contactame').scrollIntoView({behavior: 'smooth'})">
+                Contáctame
+            </button>
+
+            <div class="social-links">
+                <a href="https://linkedin.com/in/derek-alvirde" target="_blank" class="social-btn linkedin">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </a>
+                <a href="https://github.com/derekrex333" target="_blank" class="social-btn github">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+                <a href="mailto:Derekjrex@gmail.com" class="social-btn email">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z" />
+                    </svg>
+                </a>
+                <a href="files/CV-Derek-Alvirde.pdf" download class="social-btn cv">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M11.363 2c4.155 0 2.637 6 2.637 6s6-1.65 6 2.457v11.543h-16v-20h7.363zm.826-2h-10.189v24h20v-14.386c0-2.391-6.648-9.614-9.811-9.614zm4.811 13h-2.628v3.686h.907v-1.472h1.49v-.732h-1.49v-.698h1.721v-.784zm-4.9 0h-1.599v3.686h1.599c.537 0 .961-.181 1.262-.535.555-.658.587-2.034-.062-2.692-.298-.3-.712-.459-1.2-.459zm-.692.783h.496c.473 0 .802.173.915.644.064.267.077.679-.021.948-.128.351-.381.528-.754.528h-.637v-2.12zm-2.74-.783h-1.668v3.686h.907v-1.277h.761c.619 0 1.064-.277 1.224-.763.095-.291.095-.597 0-.885-.16-.484-.606-.761-1.224-.761zm-.761.732h.546c.235 0 .467.028.576.228.067.123.067.366 0 .489-.109.199-.341.227-.576.227h-.546v-.944z" />
+                    </svg>
+                    CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-mi">
+        <div class="container">
+            <h2>SOBRE MI</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Soy estudiante de Ingeniería en Ciencia de Datos en la UVM y técnico en autotrónica.
+                        He complementado mi formación con certificaciones en análisis de datos de Google,
+                        IBM y universidades internacionales.
+                    </p>
+
+                    <p>
+                        Trabajo con Python, SQL, R y herramientas de visualización como Tableau,
+                        Power BI y Excel para analizar datos, construir modelos y generar
+                        insights útiles para la toma de decisiones.
+                    </p>
+
+                    <p>
+                        Mi objetivo profesional es aplicar la ciencia de datos para transformar
+                        información en conocimiento que permita resolver problemas reales.
+                    </p>
+                    <section id="stack">
+                        <h2>Core Stack</h2>
+                        <div class="skill-tags-row">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Tableau</span>
+                            <span class="skill-tag">Machine Learning</span>
+                        </div>
+                    </section>
+
+                    <div class="skills">
+                        <div class="skills-section">
+                            <h3>Programming</h3>
+                            <div class="skill-tags-row">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">R</span>
+                                <span class="skill-tag">Q#</span>
+                                <span class="skill-tag">C</span>
+                                <span class="skill-tag">C++</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">Java</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-section">
+                            <h3>Data & Databases</h3>
+                            <div class="skill-tags-row">
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">MySQL</span>
+                                <span class="skill-tag">PostgreSQL</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-section">
+                            <h3>Data Analysis & Visualization</h3>
+                            <div class="skill-tags-row">
+                                <span class="skill-tag">Excel</span>
+                                <span class="skill-tag">Tableau</span>
+                                <span class="skill-tag">Power BI</span>
+                                <span class="skill-tag">IBM Cognos</span>
+                                <span class="skill-tag">Pandas</span>
+                                <span class="skill-tag">NumPy</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-section">
+                            <h3>Web Development</h3>
+                            <div class="skill-tags-row">
+                                <span class="skill-tag">HTML</span>
+                                <span class="skill-tag">CSS</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cursos">
+        <div class="container">
+            <h2>Cursos y Certificaciones</h2>
+            <div class="cert-container">
+
+                <div class="cert-card">
+                    <img src="images/harvard-logo.png" alt="Harvard" class="cert-logo">
+                    <h3>Harvard</h3>
+                    <p><strong>Curso:</strong> CS50's Introduction to Computer Science</p>
+                    <p><strong>Temas:</strong> Algoritmos, C, Python, SQL, HTML, CSS, JavaScript</p>
+                </div>
+
+                <div class="cert-card">
+                    <img src="images/ucirvine-logo.png" alt="UC Irvine" class="cert-logo">
+                    <h3>UC Irvine</h3>
+                    <p><strong>Curso:</strong> Data Science Fundamentals</p>
+                    <p><strong>Temas:</strong> Data Mining, Modelado Predictivo, Regresión, Clustering, NLP</p>
+                </div>
+
+                <div class="cert-card">
+                    <img src="images/ibm-logo.png" alt="IBM" class="cert-logo">
+                    <h3>IBM</h3>
+                    <p><strong>Certificación:</strong> IBM Data Analyst Professional Certificate</p>
+                    <p><strong>Temas:</strong> Python, SQL, Análisis de Datos, IBM Cognos, Dashboards</p>
+                </div>
+
+                <div class="cert-card">
+                    <img src="images/google-logo.png" alt="Google" class="cert-logo">
+                    <h3>Google</h3>
+                    <p><strong>Certificación:</strong> Google Data Analytics Professional Certificate</p>
+                    <p><strong>Temas:</strong> SQL, R, Excel, Tableau, Data Cleaning</p>
+                </div>
+
+                <div class="cert-card">
+                    <img src="images/unam-logo.png" alt="UNAM" class="cert-logo">
+                    <h3>UNAM</h3>
+                    <p><strong>Curso:</strong> Introducción a Data Science con R</p>
+                    <p><strong>Temas:</strong> Programación en R, Estadística, Análisis de Datos</p>
+                </div>
+
+                <a href="certificaciones.html" class="cert-card cert-card-link"
+                    style="text-decoration: none; color: inherit; cursor: pointer;">
+                    <div class="cert-more-icon"></div>
+                    <h3>Ver Todos los Cursos</h3>
+                    <p>Haz clic aquí para visualizar todas mis certificaciones y los PDF</p>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos">
+        <div class="container">
+            <h2>Proyectos Destacados</h2>
+            <div class="projects-container">
+                <a href="https://github.com/derekrex333/GEO_BALANCE" target="_blank" class="project-card-link">
+                    <div class="project-card">
+                        <img src="images/icon-ecobalance.png" alt="Eco-Balance" class="project-icon">
+                        <h3>Eco-Balance</h3>
+                        <p>Aplicación web progresiva (PWA) enfocada en el monitoreo ecológico mediante IA.</p>
+                        <ul>
+                            <li>Cálculo del Índice de Salud del Ecosistema (EHI)</li>
+                            <li>Modelos matemáticos de biodiversidad y sostenibilidad</li>
+                            <li>Alertas en tiempo real</li>
+                            <li>Integración con bases de datos y módulos de IA</li>
+                            <li>Conciencia ecológica proactiva</li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="https://github.com/derekrex333/CALCULADORA-MATEMATICAS-COMPLETA-" target="_blank"
+                    class="project-card-link">
+                    <div class="project-card">
+                        <img src="images/icon-calculadora.png.png" alt="Calculadora" class="project-icon">
+                        <h3>Mathematical Computing Toolkit</h3>
+                        <p>Proyecto completo de cálculo y matemáticas avanzadas.</p>
+                        <ul>
+                            <li>Aritmética básica y funciones</li>
+                            <li>Geometría y trigonometría</li>
+                            <li>Estadística y probabilidad</li>
+                            <li>Cálculo (derivadas, integrales)</li>
+                            <li>Álgebra lineal y matrices</li>
+                            <li>Matemáticas discretas</li>
+                            <li>Análisis numérico y optimización</li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="/files/excel/CarSalesByModelEnd (1).xlsx" target="_blank" class="project-card-link">
+                    <div class="project-card">
+                        <img src="images/icon-carsales.png.png" alt="Car Sales" class="project-icon">
+                        <h3>Automotive Sales Dataset Analysis</h3>
+                        <p>Base de datos detallada de ventas de automóviles por modelo y marca.</p>
+                        <ul>
+                            <li>Desempeño por modelo vendido</li>
+                            <li>Comparación entre marcas</li>
+                            <li>Análisis temporal de ventas</li>
+                            <li>Rendimiento por concesionaria</li>
+                            <li>Identificación de tendencias del mercado automotriz con base de datos .xlsx</li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="https://rpubs.com/derekalv/1332616" target="_blank" class="project-card-link">
+                    <div class="project-card">
+                        <img src="images/icon-cyclistic.png" alt="Cyclistic" class="project-icon">
+                        <h3>Análisis Cyclistic: Miembros vs Casuales</h3>
+                        <p>Exploración de datos de bicicletas compartidas para entender diferencias en uso entre
+                            miembros anuales y usuarios casuales.</p>
+                        <ul>
+                            <li>Limpieza y análisis en R (tidyverse, ggplot2)</li>
+                            <li>Duración de viajes</li>
+                            <li>Patrones por día/semana y visualizaciones clave</li>
+                            <li>Recomendaciones para conversión a membresías</li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="https://github.com/derekrex333/enlace-escuela-libreria" target="_blank"
+                    class="project-card-link">
+                    <div class="project-card">
+                        <img src="images/icon-bibloteca.png" alt="Dashboard" class="project-icon">
+                        <h3>Enlace Biblotecas/Escuelas</h3>
+                        <p>Enlace para el sistema de prestamos o ventas de biblotecas/escuelas</p>
+                        <ul>
+                            <li>integracion de C++</li>
+                            <li>Qt para la interfaz grafica</li>
+                            <li>integracion con base de datos postgresql</li>
+                            <li>creacion de vales de prestamo</li>
+                            <li>reportes semanales de la situacion</li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="proyectos.html" target="_blank" class="project-card-link">
+                    <div class="project-card">
+                        <img src="images/MAS_PROYECTOS.JPG" alt="Dashboard" class="project-icon">
+                        <h3>MAS PROYECTOS</h3>
+                        <p>Esta seccion contine una recopilacion de los proyectos que he realizado anteriormente
+                            y proyectos completos que demuestran mi experiencia en analisis de datos, programacion
+                            y desarrollo de software
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <form class="contact-form" action="https://formspree.io/f/mzdjeaee" method="POST">
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+        </div>
+        <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Enviar Mensaje</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2025 Alvirde Derek. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
