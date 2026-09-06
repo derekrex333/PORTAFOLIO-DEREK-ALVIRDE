@@ -39,7 +39,84 @@
         <div class="container">
             <div class="projects-grid">
 
-                <!-- Proyecto 1 -->
+                <!-- MotorSense -->
+                <div class="project-card">
+                    <img src="images/motorsense-roc.png" alt="MotorSense - Curva ROC diagnóstico predictivo"
+                        class="project-image">
+                    <div class="project-content">
+                        <h3>MotorSense — Diagnóstico Predictivo</h3>
+                        <div class="project-meta">
+                            <span>⚙️ AI4I 2020 · 10k motores</span>
+                            <span>📉 Recall 86.8%</span>
+                            <span>📈 ROC-AUC 0.97</span>
+                        </div>
+                        <p class="project-description">
+                            ¿Anticipar la falla antes de que pare la línea? Regresión logística
+                            <strong>desde cero</strong> (GD, class_weight, copias defensivas) vs baselines
+                            sklearn sobre dataset desbalanceado (3.4% fallas). Split estratificado 80/20,
+                            <em>StandardScaler</em> solo en train y evaluación sin accuracy.
+                        </p>
+                        <p class="project-insight">
+                            <strong>Insight:</strong> Sin compensar, el recall se hunde (~15%); con
+                            <em>balanced</em>/SMOTE sube a ~85%. RandomForest balanced: prec 0.885,
+                            rec 0.794, ROC-AUC 0.971. Paridad scratch↔sklearn validada (corr 0.94).
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Scikit-learn</span>
+                            <span class="project-tag">NumPy</span>
+                            <span class="project-tag">Pandas</span>
+                            <span class="project-tag">Matplotlib</span>
+                            <span class="project-tag">Pytest</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/derekrex333/MotorSense-Diagnostico-Predictivo"
+                                target="_blank" class="btn-view">Ver proyecto</a>
+                            <a href="https://github.com/derekrex333/MotorSense-Diagnostico-Predictivo"
+                                target="_blank" class="btn-github">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VQC -->
+                <div class="project-card">
+                    <img src="images/vqc-fronteras.png" alt="Clasificador Cuántico Variacional - Fronteras de decisión"
+                        class="project-image">
+                    <div class="project-content">
+                        <h3>Clasificador Cuántico Variacional (VQC)</h3>
+                        <div class="project-meta">
+                            <span>⚛️ 2 qubits</span>
+                            <span>🔬 Híbrido cuántico-clásico</span>
+                            <span>✅ Paridad &lt;1e-6</span>
+                        </div>
+                        <p class="project-description">
+                            Clasificador híbrido con <strong>angle encoding Ry(x)</strong> y ansatz
+                            hardware-efficient (Ry/Rz + CNOT, 12 parámetros con L=3). Doble backend:
+                            simulador NumPy exacto por defecto y Q# opcional con validación cruzada.
+                            Gradientes por <em>parameter-shift rule</em> y optimización Adam/SGD.
+                        </p>
+                        <p class="project-insight">
+                            <strong>Insight:</strong> En 2 features lo clásico (~0.85 acc) suele superar al VQC
+                            (~0.75-0.85); el valor está en fronteras no lineales y análisis de <em>barren plateaus</em>.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Q#</span>
+                            <span class="project-tag">NumPy</span>
+                            <span class="project-tag">Scikit-learn</span>
+                            <span class="project-tag">Quantum ML</span>
+                            <span class="project-tag">Pytest</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/derekrex333/Clasificador-Cuantico-Variacional-VQC"
+                                target="_blank" class="btn-view">Ver proyecto</a>
+                            <a href="https://github.com/derekrex333/Clasificador-Cuantico-Variacional-VQC"
+                                target="_blank" class="btn-github">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Impacto Recesiones -->
                 <div class="project-card">
                     <img src="images/ventas-autos.png" alt="Impacto de recesiones en ventas de automóviles"
                         class="project-image">
@@ -51,16 +128,12 @@
                             <span>📉 Análisis económico</span>
                         </div>
                         <p class="project-description">
-                            Análisis exploratorio de datos para estudiar cómo los periodos
-                            de recesión económica afectan las ventas de automóviles.
-                            Se analizaron variables macroeconómicas como PIB,
-                            desempleo y gasto publicitario.
+                            Análisis exploratorio para estudiar cómo los periodos de recesión afectan las ventas.
+                            Variables macroeconómicas: PIB, desempleo y gasto publicitario.
                         </p>
                         <p class="project-insight">
-                            <strong>Insight:</strong> Durante periodos de recesión las ventas
-                            muestran caídas significativas y mayor volatilidad,
-                            indicando una fuerte relación entre el mercado automotriz
-                            y el ciclo económico.
+                            <strong>Insight:</strong> Caídas significativas y mayor volatilidad en recesiones,
+                            evidenciando fuerte relación con el ciclo económico.
                         </p>
                         <div class="project-tags">
                             <span class="project-tag">Python</span>
@@ -71,53 +144,174 @@
                         </div>
                         <div class="project-actions">
                             <a href="https://github.com/derekrex333/visualization-of-ventas-de-autom-viles"
-                                class="btn-view">Ver análisis</a>
+                                target="_blank" class="btn-view">Ver análisis</a>
                             <a href="https://github.com/derekrex333/visualization-of-ventas-de-autom-viles"
-                                class="btn-github">GitHub</a>
+                                target="_blank" class="btn-github">GitHub</a>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Proyecto 2 -->
-            <div class="project-card">
-                <img src="images/project2.jpg" alt="Proyecto 2" class="project-image">
-                <div class="project-content">
-                    <h3>Proyecto 2</h3>
-                    <p class="project-description">Descripción del proyecto 2</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Python</span>
-                        <span class="project-tag">SQL</span>
-                        <span class="project-tag">Tableau</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="#" class="btn-view">Ver Proyecto</a>
-                        <a href="#" class="btn-github">GitHub</a>
+                <!-- Eco-Balance -->
+                <div class="project-card">
+                    <img src="images/icon-ecobalance.png" alt="Eco-Balance" class="project-image"
+                        style="object-fit: contain; background: #0a0f0d; padding: 1rem;">
+                    <div class="project-content">
+                        <h3>Eco-Balance</h3>
+                        <div class="project-meta">
+                            <span>🌱 PWA</span>
+                            <span>🤖 IA ambiental</span>
+                            <span>📈 EHI</span>
+                        </div>
+                        <p class="project-description">
+                            PWA de monitoreo ecológico con IA. Cálculo del Índice de Salud del Ecosistema (EHI),
+                            modelos de biodiversidad/sostenibilidad, alertas en tiempo real e integración con BD.
+                        </p>
+                        <p class="project-insight">
+                            <strong>Resultado:</strong> Dashboard para decisiones ambientales y conciencia ecológica proactiva.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">PWA</span>
+                            <span class="project-tag">IA</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Python</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/derekrex333/GEO_BALANCE" target="_blank" class="btn-view">Ver proyecto</a>
+                            <a href="https://github.com/derekrex333/GEO_BALANCE" target="_blank" class="btn-github">GitHub</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Proyecto 3 -->
-            <div class="project-card">
-                <img src="images/project3.jpg" alt="Proyecto 3" class="project-image">
-                <div class="project-content">
-                    <h3>Proyecto 3</h3>
-                    <p class="project-description">Descripción del proyecto 3</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Python</span>
-                        <span class="project-tag">SQL</span>
-                        <span class="project-tag">Tableau</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="#" class="btn-view">Ver Proyecto</a>
-                        <a href="#" class="btn-github">GitHub</a>
+                <!-- Cyclistic -->
+                <div class="project-card">
+                    <img src="images/icon-cyclistic.png" alt="Cyclistic" class="project-image"
+                        style="object-fit: contain; background: #0a0f0d; padding: 1rem;">
+                    <div class="project-content">
+                        <h3>Análisis Cyclistic: Miembros vs Casuales</h3>
+                        <div class="project-meta">
+                            <span>🚲 Bikeshare</span>
+                            <span>📊 R</span>
+                            <span>📈 Conversión</span>
+                        </div>
+                        <p class="project-description">
+                            Exploración de datos de bicicletas compartidas para entender diferencias entre
+                            miembros anuales y usuarios casuales. Limpieza y visualizaciones en R.
+                        </p>
+                        <p class="project-insight">
+                            <strong>Resultado:</strong> Patrones de duración por día/semana y recomendaciones
+                            para conversión a membresías.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">R</span>
+                            <span class="project-tag">tidyverse</span>
+                            <span class="project-tag">ggplot2</span>
+                            <span class="project-tag">EDA</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://rpubs.com/derekalv/1332616" target="_blank" class="btn-view">Ver análisis</a>
+                            <a href="https://rpubs.com/derekalv/1332616" target="_blank" class="btn-github">RPubs</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
+                <!-- Enlace Bibliotecas -->
+                <div class="project-card">
+                    <img src="images/icon-bibloteca.png" alt="Enlace Bibliotecas" class="project-image"
+                        style="object-fit: contain; background: #0a0f0d; padding: 1rem;">
+                    <div class="project-content">
+                        <h3>Enlace Bibliotecas / Escuelas</h3>
+                        <div class="project-meta">
+                            <span>📚 Préstamos</span>
+                            <span>🖥️ Qt</span>
+                            <span>🐘 PostgreSQL</span>
+                        </div>
+                        <p class="project-description">
+                            Sistema de préstamos/ventas para bibliotecas y escuelas. Interfaz Qt, lógica en C++,
+                            vales de préstamo y reportes semanales.
+                        </p>
+                        <p class="project-insight">
+                            <strong>Stack:</strong> C++ · Qt · PostgreSQL — flujo completo de inventario y reportes.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">C++</span>
+                            <span class="project-tag">Qt</span>
+                            <span class="project-tag">PostgreSQL</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/derekrex333/enlace-escuela-libreria" target="_blank" class="btn-view">Ver proyecto</a>
+                            <a href="https://github.com/derekrex333/enlace-escuela-libreria" target="_blank" class="btn-github">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toolkit Matemático -->
+                <div class="project-card">
+                    <img src="images/icon-calculadora.png.png" alt="Mathematical Computing Toolkit" class="project-image"
+                        style="object-fit: contain; background: #0a0f0d; padding: 1rem;">
+                    <div class="project-content">
+                        <h3>Mathematical Computing Toolkit</h3>
+                        <div class="project-meta">
+                            <span>🧮 Cálculo</span>
+                            <span>📐 Álgebra</span>
+                            <span>📊 Numérico</span>
+                        </div>
+                        <p class="project-description">
+                            Toolkit completo de matemáticas avanzadas: aritmética, geometría, trigonometría,
+                            estadística, cálculo, álgebra lineal, discretas y optimización.
+                        </p>
+                        <p class="project-insight">
+                            <strong>Alcance:</strong> Derivadas, integrales, matrices y análisis numérico en un solo toolkit.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Matemáticas</span>
+                            <span class="project-tag">Algoritmos</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/derekrex333/CALCULADORA-MATEMATICAS-COMPLETA-" target="_blank" class="btn-view">Ver proyecto</a>
+                            <a href="https://github.com/derekrex333/CALCULADORA-MATEMATICAS-COMPLETA-" target="_blank" class="btn-github">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Automotive Sales Dataset -->
+                <div class="project-card">
+                    <img src="images/icon-carsales.png.png" alt="Automotive Sales Dataset" class="project-image"
+                        style="object-fit: contain; background: #0a0f0d; padding: 1rem;">
+                    <div class="project-content">
+                        <h3>Automotive Sales Dataset Analysis</h3>
+                        <div class="project-meta">
+                            <span>🚗 Ventas por modelo</span>
+                            <span>📊 Excel</span>
+                            <span>🏢 Concesionarias</span>
+                        </div>
+                        <p class="project-description">
+                            Base de datos detallada de ventas por modelo y marca. Análisis temporal, comparación
+                            entre marcas y rendimiento por concesionaria.
+                        </p>
+                        <p class="project-insight">
+                            <strong>Resultado:</strong> Tendencias del mercado automotriz identificadas desde .xlsx.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Excel</span>
+                            <span class="project-tag">EDA</span>
+                            <span class="project-tag">Data Analysis</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="files/excel/CarSalesByModelEnd (1).xlsx" target="_blank" class="btn-view">Ver dataset</a>
+                            <a href="files/excel/CarSalesByModelEnd (1).xlsx" target="_blank" class="btn-github">Descargar</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
+
+    <footer>
+        <p>&copy; 2026 Alvirde Derek. Todos los derechos reservados.</p>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
