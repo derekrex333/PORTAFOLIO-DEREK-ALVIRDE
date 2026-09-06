@@ -73,20 +73,20 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        Soy estudiante de Ingeniería en Ciencia de Datos en la UVM y técnico en autotrónica.
-                        He complementado mi formación con certificaciones en análisis de datos de Google,
-                        IBM y universidades internacionales.
+                        De diagnosticar motores a diagnosticar modelos. Soy técnico en autotrónica y estudiante
+                        de Ingeniería en Ciencia de Datos en la UVM, con una segunda formación en curso en
+                        Ingeniería en IA (ESCOM-IPN). Mi manera de trabajar es simple: antes de usar una
+                        librería, la construyo desde cero para entender qué hay detrás — así pasé de un
+                        algoritmo de cierre convexo concurrente a un clasificador cuántico y a un modelo
+                        de mantenimiento predictivo entrenado con mi propio código de machine learning.
                     </p>
 
                     <p>
-                        Trabajo con Python, SQL, R y herramientas de visualización como Tableau,
-                        Power BI y Excel para analizar datos, construir modelos y generar
-                        insights útiles para la toma de decisiones.
-                    </p>
-
-                    <p>
-                        Mi objetivo profesional es aplicar la ciencia de datos para transformar
-                        información en conocimiento que permita resolver problemas reales.
+                        Trabajo con Python, SQL, R y las herramientas del oficio — Tableau, Power BI, Excel —
+                        y desde 2024 lo aplico como freelance en análisis de datos, automatización y tutoría
+                        de programación. Tengo certificaciones de Google, IBM y universidades internacionales,
+                        pero lo que quiero que veas no es el certificado — es lo que construí con lo que
+                        aprendí de él.
                     </p>
                     <section id="stack">
                         <h2>Core Stack</h2>
@@ -201,113 +201,89 @@
     <section id="proyectos">
         <div class="container">
             <h2>Proyectos Destacados</h2>
+            <p style="text-align:center; opacity:0.8; margin-bottom:2.5rem; max-width:700px; margin-left:auto; margin-right:auto;">
+                Una selección de mis proyectos más representativos — descubre el resto en la galería completa.
+            </p>
             <div class="projects-container">
+                <!-- 0 — MotorSense (destacado) -->
+                <a href="https://github.com/derekrex333/MotorSense-Diagnostico-Predictivo" target="_blank"
+                    class="project-card-link">
+                    <div class="project-card">
+                        <img src="images/motorsense-roc.png" alt="MotorSense diagnóstico predictivo" class="project-icon"
+                            style="object-fit: cover;">
+                        <h3>MotorSense — Diagnóstico Predictivo</h3>
+                        <p>Logística desde cero vs sklearn · AI4I 2020 · 10k motores, 3.4% fallas.</p>
+                        <p style="font-size:0.92rem; margin-top:0.6rem; opacity:0.9;"><strong>Resultado:</strong> Recall ~15% → ~85% con balanced/SMOTE · RF balanced ROC-AUC 0.971 · Paridad scratch↔sklearn corr 0.94.</p>
+                    </div>
+                </a>
+                <!-- 1 — VQC (destacado) -->
+                <a href="https://github.com/derekrex333/Clasificador-Cuantico-Variacional-VQC" target="_blank"
+                    class="project-card-link">
+                    <div class="project-card">
+                        <img src="images/vqc-fronteras.png" alt="Clasificador Cuántico Variacional" class="project-icon"
+                            style="object-fit: cover;">
+                        <h3>Clasificador Cuántico Variacional (VQC)</h3>
+                        <p>Híbrido cuántico-clásico · 2 qubits · Angle encoding + ansatz hardware-efficient.</p>
+                        <p style="font-size:0.92rem; margin-top:0.6rem; opacity:0.9;"><strong>Resultado:</strong> Fronteras no lineales en moons con ~0.80 accuracy (12 params vs 3 de logística). Validación cruzada NumPy↔Q# &lt;1e-6 · Gradientes parameter-shift · Adam/SGD.</p>
+                    </div>
+                </a>
+                <!-- 2 — Eco-Balance -->
                 <a href="https://github.com/derekrex333/GEO_BALANCE" target="_blank" class="project-card-link">
                     <div class="project-card">
                         <img src="images/icon-ecobalance.png" alt="Eco-Balance" class="project-icon">
                         <h3>Eco-Balance</h3>
-                        <p>Aplicación web progresiva (PWA) enfocada en el monitoreo ecológico mediante IA.</p>
-                        <ul>
-                            <li>Cálculo del Índice de Salud del Ecosistema (EHI)</li>
-                            <li>Modelos matemáticos de biodiversidad y sostenibilidad</li>
-                            <li>Alertas en tiempo real</li>
-                            <li>Integración con bases de datos y módulos de IA</li>
-                            <li>Conciencia ecológica proactiva</li>
-                        </ul>
+                        <p>PWA de monitoreo ecológico con IA — Índice de Salud del Ecosistema (EHI).</p>
+                        <p style="font-size:0.92rem; margin-top:0.6rem; opacity:0.9;"><strong>Resultado:</strong> Dashboard con alertas en tiempo real, modelos de biodiversidad y base de datos integrada para toma de decisiones ambientales.</p>
                     </div>
                 </a>
-                <a href="https://github.com/derekrex333/CALCULADORA-MATEMATICAS-COMPLETA-" target="_blank"
+                <!-- 3 — Impacto Recesiones -->
+                <a href="https://github.com/derekrex333/visualization-of-ventas-de-autom-viles" target="_blank"
                     class="project-card-link">
                     <div class="project-card">
-                        <img src="images/icon-calculadora.png.png" alt="Calculadora" class="project-icon">
-                        <h3>Mathematical Computing Toolkit</h3>
-                        <p>Proyecto completo de cálculo y matemáticas avanzadas.</p>
-                        <ul>
-                            <li>Aritmética básica y funciones</li>
-                            <li>Geometría y trigonometría</li>
-                            <li>Estadística y probabilidad</li>
-                            <li>Cálculo (derivadas, integrales)</li>
-                            <li>Álgebra lineal y matrices</li>
-                            <li>Matemáticas discretas</li>
-                            <li>Análisis numérico y optimización</li>
-                        </ul>
+                        <img src="images/ventas-autos.png" alt="Impacto de recesiones en ventas" class="project-icon"
+                            style="object-fit: cover;">
+                        <h3>Impacto de Recesiones en Ventas de Automóviles</h3>
+                        <p>Análisis exploratorio 1980-2023 · PIB, desempleo y gasto publicitario.</p>
+                        <p style="font-size:0.92rem; margin-top:0.6rem; opacity:0.9;"><strong>Resultado:</strong> 9 visualizaciones — caídas y alta volatilidad en recesiones evidencian fuerte correlación con el ciclo económico.</p>
                     </div>
                 </a>
-                <a href="/files/excel/CarSalesByModelEnd (1).xlsx" target="_blank" class="project-card-link">
-                    <div class="project-card">
-                        <img src="images/icon-carsales.png.png" alt="Car Sales" class="project-icon">
-                        <h3>Automotive Sales Dataset Analysis</h3>
-                        <p>Base de datos detallada de ventas de automóviles por modelo y marca.</p>
-                        <ul>
-                            <li>Desempeño por modelo vendido</li>
-                            <li>Comparación entre marcas</li>
-                            <li>Análisis temporal de ventas</li>
-                            <li>Rendimiento por concesionaria</li>
-                            <li>Identificación de tendencias del mercado automotriz con base de datos .xlsx</li>
-                        </ul>
-                    </div>
-                </a>
-                <a href="https://rpubs.com/derekalv/1332616" target="_blank" class="project-card-link">
-                    <div class="project-card">
-                        <img src="images/icon-cyclistic.png" alt="Cyclistic" class="project-icon">
-                        <h3>Análisis Cyclistic: Miembros vs Casuales</h3>
-                        <p>Exploración de datos de bicicletas compartidas para entender diferencias en uso entre
-                            miembros anuales y usuarios casuales.</p>
-                        <ul>
-                            <li>Limpieza y análisis en R (tidyverse, ggplot2)</li>
-                            <li>Duración de viajes</li>
-                            <li>Patrones por día/semana y visualizaciones clave</li>
-                            <li>Recomendaciones para conversión a membresías</li>
-                        </ul>
-                    </div>
-                </a>
-                <a href="https://github.com/derekrex333/enlace-escuela-libreria" target="_blank"
-                    class="project-card-link">
-                    <div class="project-card">
-                        <img src="images/icon-bibloteca.png" alt="Dashboard" class="project-icon">
-                        <h3>Enlace Biblotecas/Escuelas</h3>
-                        <p>Enlace para el sistema de prestamos o ventas de biblotecas/escuelas</p>
-                        <ul>
-                            <li>integracion de C++</li>
-                            <li>Qt para la interfaz grafica</li>
-                            <li>integracion con base de datos postgresql</li>
-                            <li>creacion de vales de prestamo</li>
-                            <li>reportes semanales de la situacion</li>
-                        </ul>
-                    </div>
-                </a>
-                <a href="proyectos.html" target="_blank" class="project-card-link">
-                    <div class="project-card">
-                        <img src="images/MAS_PROYECTOS.JPG" alt="Dashboard" class="project-icon">
-                        <h3>MAS PROYECTOS</h3>
-                        <p>Esta seccion contine una recopilacion de los proyectos que he realizado anteriormente
-                            y proyectos completos que demuestran mi experiencia en analisis de datos, programacion
-                            y desarrollo de software
-                        </p>
+                <!-- MAS PROYECTOS -->
+                <a href="proyectos.html" class="project-card-link">
+                    <div class="project-card" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; min-height:420px;">
+                        <img src="images/MAS_PROYECTOS.jpg" alt="Más proyectos" class="project-icon" style="max-height:180px; object-fit:cover;">
+                        <h3>MÁS PROYECTOS →</h3>
+                        <p>Ver galería completa con todos los proyectos: análisis en R, C++/Qt, toolkits matemáticos y más.</p>
+                        <span style="margin-top:1rem; display:inline-block; padding:0.7rem 1.6rem; background:linear-gradient(135deg,#00ff87,#00cc6a); color:#000; border-radius:30px; font-weight:700; font-size:0.95rem;">Explorar todos</span>
                     </div>
                 </a>
             </div>
         </div>
     </section>
 
-    <form class="contact-form" action="https://formspree.io/f/mzdjeaee" method="POST">
-        <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+    <section id="contactame">
+        <div class="container">
+            <h2>CONTÁCTAME</h2>
+            <form class="contact-form" action="https://formspree.io/f/mzdjeaee" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                <p class="form-status" role="status" aria-live="polite" hidden></p>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
-        </div>
-        <div class="form-group">
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Enviar Mensaje</button>
-    </form>
+    </section>
 
     <footer>
-        <p>&copy; 2025 Alvirde Derek. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Alvirde Derek. Todos los derechos reservados.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
