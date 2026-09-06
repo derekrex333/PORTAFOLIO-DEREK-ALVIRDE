@@ -52,6 +52,64 @@ const observer = new IntersectionObserver(function (entries) {
 certItems.forEach(item => observer.observe(item));
 
 
+// Revelado suave de tarjetas de proyecto al hacer scroll
+const projectCards = document.querySelectorAll('.project-card');
+if ('IntersectionObserver' in window && projectCards.length) {
+    const revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    projectCards.forEach(card => {
+        card.classList.add('reveal');
+        revealObserver.observe(card);
+    });
+}
+
+
+// Envío del formulario de contacto sin salir de la página
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    const formStatus = contactForm.querySelector('.form-status');
+    contactForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const submitBtn = contactForm.querySelector('.submit-btn');
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Enviando…';
+        formStatus.hidden = true;
+        formStatus.className = 'form-status';
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: { 'Accept': 'application/json' }
+            });
+            if (response.ok) {
+                contactForm.reset();
+                formStatus.textContent = '¡Mensaje enviado! Te responderé pronto.';
+                formStatus.classList.add('success');
+            } else {
+                formStatus.textContent = 'Hubo un problema. Escríbeme a Derekjrex@gmail.com.';
+                formStatus.classList.add('error');
+            }
+        } catch {
+            formStatus.textContent = 'Sin conexión. Escríbeme a Derekjrex@gmail.com.';
+            formStatus.classList.add('error');
+        }
+
+        formStatus.hidden = false;
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+    });
+}
+
+
 // Scroll suave para navegación
 document.querySelectorAll('nav a[href^="#"]').forEach(link => {
     link.addEventListener('click', function (e) {
