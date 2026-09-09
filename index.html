@@ -12,14 +12,15 @@
 <body class="light">
     <nav>
         <ul>
-            <li><a href="#inicio">INICIO</a></li>
-            <li><a href="#sobre-mi">SOBRE MI</a></li>
-            <li><a href="#cursos">CURSOS</a></li>
-            <li><a href="#proyectos">PROYECTOS</a></li>
-            <li><a href="#contactame">CONTÁCTAME</a></li>
+            <li><a href="#inicio" data-i18n="nav_inicio">INICIO</a></li>
+            <li><a href="#sobre-mi" data-i18n="nav_sobre">SOBRE MI</a></li>
+            <li><a href="#proyectos" data-i18n="nav_proyectos">PROYECTOS</a></li>
+            <li><a href="#cursos" data-i18n="nav_cursos">CURSOS</a></li>
+            <li><a href="#contactame" data-i18n="nav_contacto">CONTÁCTAME</a></li>
             <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
                 <span class="toggle-slider">☀️</span>
             </button>
+            <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma" title="Cambiar idioma / Switch language">ES</button>
         </ul>
     </nav>
 
@@ -27,13 +28,13 @@
         <div>
             <canvas id="neural-canvas"></canvas>
             <h1>DEREK ALVIRDE</h1>
-            <p class="intro">
+            <p class="intro" data-i18n="hero_intro">
                 Data Science Student specializing in Data Analysis,
                 Statistical Modeling and Machine Learning.
             </p>
 
             <button class="cta-button"
-                onclick="document.getElementById('contactame').scrollIntoView({behavior: 'smooth'})">
+                onclick="document.getElementById('contactame').scrollIntoView({behavior: 'smooth'})" data-i18n="hero_cta">
                 Contáctame
             </button>
 
@@ -69,10 +70,10 @@
 
     <section id="sobre-mi">
         <div class="container">
-            <h2>SOBRE MI</h2>
+            <h2 data-i18n="sobre_title">SOBRE MI</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>
+                    <p data-i18n="sobre_p1">
                         De diagnosticar motores a diagnosticar modelos. Soy técnico en autotrónica y estudiante
                         de Ingeniería en Ciencia de Datos en la UVM, con una segunda formación en curso en
                         Ingeniería en IA (ESCOM-IPN). Mi manera de trabajar es simple: antes de usar una
@@ -81,75 +82,134 @@
                         de mantenimiento predictivo entrenado con mi propio código de machine learning.
                     </p>
 
-                    <p>
-                        Trabajo con Python, SQL, R y las herramientas del oficio — Tableau, Power BI, Excel —
-                        y desde 2024 lo aplico como freelance en análisis de datos, automatización y tutoría
-                        de programación. Tengo certificaciones de Google, IBM y universidades internacionales,
-                        pero lo que quiero que veas no es el certificado — es lo que construí con lo que
-                        aprendí de él.
+                    <p data-i18n="sobre_p2">
+                        Resuelvo problemas con mi core stack — Python, SQL y Machine Learning (Pandas/NumPy) — y
+                        visualizo en Tableau/Power BI. Mi sello es demostrarlo: MotorSense desde cero con paridad
+                        0.94 vs sklearn y recall 15%→85%. Busco prácticas donde diagnosticar modelos genere impacto
+                        real, no solo dashboards.
                     </p>
                     <section id="stack">
-                        <h2>Core Stack</h2>
+                        <h2 data-i18n="stack_title">Core Stack — con lo que resuelvo el 80% de los problemas</h2>
                         <div class="skill-tags-row">
                             <span class="skill-tag">Python</span>
+                            <span class="skill-tag">R</span>
                             <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">Tableau</span>
                             <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">Tableau / Power BI</span>
                         </div>
+                        <details class="stack-details">
+                            <summary data-i18n="stack_also">También he usado — ver por proyecto</summary>
+                            <div class="skill-tags-row" style="margin-top:1rem;">
+                                <span class="skill-tag skill-tag-secondary">Q#</span>
+                                <span class="skill-tag skill-tag-secondary">C / C++</span>
+                                <span class="skill-tag skill-tag-secondary">Java</span>
+                                <span class="skill-tag skill-tag-secondary">JavaScript</span>
+                                <span class="skill-tag skill-tag-secondary">PostgreSQL / MySQL</span>
+                                <span class="skill-tag skill-tag-secondary">Excel</span>
+                                <span class="skill-tag skill-tag-secondary">IBM Cognos</span>
+                                <span class="skill-tag skill-tag-secondary">HTML / CSS</span>
+                            </div>
+                            <p style="font-size:0.85rem; opacity:0.7; margin-top:0.8rem; text-align:center;" data-i18n="stack_note">Cada uno aparece solo donde el proyecto lo requirió — ver detalle en cada tarjeta.</p>
+                        </details>
                     </section>
 
-                    <div class="skills">
-                        <div class="skills-section">
-                            <h3>Programming</h3>
-                            <div class="skill-tags-row">
-                                <span class="skill-tag">Python</span>
-                                <span class="skill-tag">R</span>
-                                <span class="skill-tag">Q#</span>
-                                <span class="skill-tag">C</span>
-                                <span class="skill-tag">C++</span>
-                                <span class="skill-tag">JavaScript</span>
-                                <span class="skill-tag">Java</span>
-                            </div>
-                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        <div class="skills-section">
-                            <h3>Data & Databases</h3>
-                            <div class="skill-tags-row">
-                                <span class="skill-tag">SQL</span>
-                                <span class="skill-tag">MySQL</span>
-                                <span class="skill-tag">PostgreSQL</span>
-                            </div>
+    <section id="proyectos">
+        <div class="container">
+            <h2 data-i18n="proyectos_title">Proyectos Destacados</h2>
+            <p style="text-align:center; opacity:0.8; margin-bottom:2.5rem; max-width:700px; margin-left:auto; margin-right:auto;" data-i18n="proyectos_sub">
+                Una selección de mis proyectos más representativos — descubre el resto en la galería completa.
+            </p>
+            <div class="projects-container">
+                <!-- 0 — MotorSense (destacado) -->
+                <a href="https://github.com/derekrex333/MotorSense-Diagnostico-Predictivo" target="_blank"
+                    class="project-card-link">
+                    <div class="project-card project-card-featured">
+                        <img src="images/motorsense-roc.png" alt="MotorSense diagnóstico predictivo" class="project-icon"
+                            style="object-fit: cover;">
+                        <h3 data-i18n="motorsense_title">MotorSense — Diagnóstico Predictivo</h3>
+                        <p class="project-human" data-i18n="motorsense_human">Evita paradas de fábrica anticipando fallas de motor antes de que ocurran.</p>
+                        <p style="font-size:0.92rem; margin-top:0.4rem; opacity:0.9;" data-i18n="motorsense_desc">Logística desde cero vs sklearn · AI4I 2020 · 10k motores, 3.4% fallas.</p>
+                        <div class="metric-grid">
+                            <div class="metric"><span>ROC-AUC</span><strong>0.971</strong></div>
+                            <div class="metric"><span>Recall</span><strong>15% → 85%</strong></div>
+                            <div class="metric"><span>Paridad scratch↔sklearn</span><strong>0.94</strong></div>
                         </div>
-
-                        <div class="skills-section">
-                            <h3>Data Analysis & Visualization</h3>
-                            <div class="skill-tags-row">
-                                <span class="skill-tag">Excel</span>
-                                <span class="skill-tag">Tableau</span>
-                                <span class="skill-tag">Power BI</span>
-                                <span class="skill-tag">IBM Cognos</span>
-                                <span class="skill-tag">Pandas</span>
-                                <span class="skill-tag">NumPy</span>
-                            </div>
+                        <details class="project-tech-details"><summary data-i18n="motorsense_detail_sum">Detalle técnico</summary><span data-i18n="motorsense_detail_txt">Regresión logística con GD y class_weight/SMOTE, StandardScaler solo en train, split estratificado 80/20, RF balanced como baseline (prec 0.885, rec 0.794). Validación sin accuracy. Dataset AI4I 2020 (10k, 3.4% fallas).</span></details>
+                    </div>
+                </a>
+                <!-- 1 — VQC (destacado, interés personal) -->
+                <a href="https://github.com/derekrex333/Clasificador-Cuantico-Variacional-VQC" target="_blank"
+                    class="project-card-link">
+                    <div class="project-card">
+                        <img src="images/vqc-fronteras.png" alt="Clasificador Cuántico Variacional" class="project-icon"
+                            style="object-fit: cover;">
+                        <h3 data-i18n="vqc_title">Clasificador Cuántico Variacional (VQC)</h3>
+                        <p class="project-human" data-i18n="vqc_human">Experimento: ¿puede un chip cuántico de 2 qubits clasificar datos con fronteras curvas mejor que lo clásico?</p>
+                        <p style="font-size:0.92rem; margin-top:0.4rem; opacity:0.9;" data-i18n="vqc_desc">Fronteras no lineales en moons · ~0.80 accuracy (12 params vs 3 de logística)</p>
+                        <div class="metric-grid metric-grid-small">
+                            <div class="metric"><span>Qubits</span><strong>2</strong></div>
+                            <div class="metric"><span>Accuracy</span><strong>~0.80</strong></div>
+                            <div class="metric"><span>Paridad NumPy↔Q#</span><strong>&lt;1e-6</strong></div>
                         </div>
-
-                        <div class="skills-section">
-                            <h3>Web Development</h3>
-                            <div class="skill-tags-row">
-                                <span class="skill-tag">HTML</span>
-                                <span class="skill-tag">CSS</span>
-                            </div>
-                        </div>
-
+                        <details class="project-tech-details"><summary data-i18n="vqc_detail_sum">Detalle técnico</summary><span data-i18n="vqc_detail_txt">Angle encoding Ry(x) + ansatz hardware-efficient (Ry/Rz+CNOT, L=3), gradientes parameter-shift, Adam/SGD. Doble backend NumPy exacto / Q# opcional.</span></details>
+                    </div>
+                </a>
+                <!-- 2 — Eco-Balance — LIVE https://ecobalance-khxn.onrender.com/ -->
+                <div class="project-card">
+                    <img src="images/icon-ecobalance.png" alt="Eco-Balance" class="project-icon">
+                    <h3 data-i18n="ecobalance_title">Eco-Balance — Prototipo de concepto <span style="font-size:0.75rem; font-weight:600; background:rgba(0,255,135,0.15); border:1px solid #00ff87; padding:0.15rem 0.5rem; border-radius:999px; vertical-align:middle;">repo: GEO_BALANCE</span></h3>
+                    <p class="project-human" data-i18n="ecobalance_human">Prototipo de dashboard que calcula un Índice de Salud del Ecosistema (EHI) para decisiones ambientales.</p>
+                    <p style="font-size:0.85rem; margin-top:0.4rem; opacity:0.75;" data-i18n="ecobalance_desc"><em>Live en Render ✓</em> — Alertas en tiempo real, modelos de biodiversidad y BD integrada.</p>
+                    <details class="project-tech-details"><summary data-i18n="ecobalance_detail_sum">Detalle técnico</summary><span data-i18n="ecobalance_detail_txt">PWA + IA mock EHI, JS + Python, base de datos integrada. Código abierto para iterar.</span></details>
+                    <div style="display:flex; gap:0.6rem; margin-top:1rem; flex-wrap:wrap;">
+                        <a href="https://ecobalance-khxn.onrender.com/" target="_blank" class="btn-view" style="padding:0.6rem 1.2rem; font-size:0.85rem; text-decoration:none; display:inline-flex; align-items:center; gap:0.4rem;">🌐 Ver Demo Live</a>
+                        <a href="https://github.com/derekrex333/GEO_BALANCE" target="_blank" class="btn-github" style="padding:0.6rem 1.2rem; font-size:0.85rem; text-decoration:none; display:inline-flex; align-items:center;">GitHub</a>
                     </div>
                 </div>
+                <!-- 3 — Impacto Recesiones -->
+                <a href="https://github.com/derekrex333/visualization-of-ventas-de-autom-viles" target="_blank"
+                    class="project-card-link">
+                    <div class="project-card">
+                        <img src="images/ventas-autos.png" alt="Impacto de recesiones en ventas" class="project-icon"
+                            style="object-fit: cover;">
+                        <h3 data-i18n="recesiones_title">Impacto de Recesiones en Ventas de Automóviles</h3>
+                        <p class="project-human" data-i18n="recesiones_human">¿Cómo afectan las recesiones a lo que compramos? 9 gráficos cuentan la historia 1980-2023.</p>
+                        <p style="font-size:0.92rem; margin-top:0.4rem; opacity:0.9;" data-i18n="recesiones_desc">PIB, desempleo y gasto publicitario — caídas y alta volatilidad en recesiones evidencian fuerte correlación con el ciclo económico.</p>
+                    </div>
+                </a>
+                <!-- 4 — Cyclistic -->
+                <a href="https://rpubs.com/derekalv/1332616" target="_blank" class="project-card-link">
+                    <div class="project-card">
+                        <img src="images/icon-cyclistic.png" alt="Cyclistic" class="project-icon" style="object-fit: contain; background:#0a0f0d; padding:1rem;">
+                        <h3 data-i18n="cyclistic_title">Cyclistic — Miembros vs Casuales</h3>
+                        <p class="project-human" data-i18n="cyclistic_human">R + tidyverse para convertir usuarios casuales en miembros anuales.</p>
+                        <p style="font-size:0.92rem; margin-top:0.4rem; opacity:0.9;" data-i18n="cyclistic_desc">Bikeshare · Limpieza y visualización en R · Patrones por día/semana y recomendaciones de conversión.</p>
+                    </div>
+                </a>
+                <!-- MAS PROYECTOS -->
+                <a href="proyectos.html" class="project-card-link">
+                    <div class="project-card" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; min-height:420px;">
+                        <img src="images/MAS_PROYECTOS.jpg" alt="Más proyectos" class="project-icon" style="max-height:180px; object-fit:cover;">
+                        <h3 data-i18n="mas_title">MÁS PROYECTOS →</h3>
+                        <p data-i18n="mas_desc">Ver galería completa con todos los proyectos: análisis en R, C++/Qt, toolkits matemáticos y más.</p>
+                        <span style="margin-top:1rem; display:inline-block; padding:0.7rem 1.6rem; background:linear-gradient(135deg,#00ff87,#00cc6a); color:#000; border-radius:30px; font-weight:700; font-size:0.95rem;" data-i18n="mas_btn">Explorar todos</span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
     <section id="cursos">
         <div class="container">
-            <h2>Cursos y Certificaciones</h2>
+            <h2 data-i18n="cursos_title">Cursos y Certificaciones</h2>
+            <p style="text-align:center; opacity:0.7; margin-bottom:2rem; max-width:650px; margin-left:auto; margin-right:auto; font-size:0.95rem;" data-i18n="cursos_sub">Proyectos primero, diplomas después — aquí los 5 más relevantes, el resto en la galería completa (31).</p>
             <div class="cert-container">
 
                 <div class="cert-card">
@@ -190,100 +250,45 @@
                 <a href="certificaciones.html" class="cert-card cert-card-link"
                     style="text-decoration: none; color: inherit; cursor: pointer;">
                     <div class="cert-more-icon"></div>
-                    <h3>Ver Todos los Cursos</h3>
-                    <p>Haz clic aquí para visualizar todas mis certificaciones y los PDF</p>
+                    <h3 data-i18n="ver_todos_title">Ver Todos los Cursos</h3>
+                    <p data-i18n="ver_todos_desc">Haz clic aquí para visualizar todas mis certificaciones y los PDF</p>
                 </a>
 
-            </div>
-        </div>
-    </section>
-
-    <section id="proyectos">
-        <div class="container">
-            <h2>Proyectos Destacados</h2>
-            <p style="text-align:center; opacity:0.8; margin-bottom:2.5rem; max-width:700px; margin-left:auto; margin-right:auto;">
-                Una selección de mis proyectos más representativos — descubre el resto en la galería completa.
-            </p>
-            <div class="projects-container">
-                <!-- 0 — MotorSense (destacado) -->
-                <a href="https://github.com/derekrex333/MotorSense-Diagnostico-Predictivo" target="_blank"
-                    class="project-card-link">
-                    <div class="project-card">
-                        <img src="images/motorsense-roc.png" alt="MotorSense diagnóstico predictivo" class="project-icon"
-                            style="object-fit: cover;">
-                        <h3>MotorSense — Diagnóstico Predictivo</h3>
-                        <p>Logística desde cero vs sklearn · AI4I 2020 · 10k motores, 3.4% fallas.</p>
-                        <p style="font-size:0.92rem; margin-top:0.6rem; opacity:0.9;"><strong>Resultado:</strong> Recall ~15% → ~85% con balanced/SMOTE · RF balanced ROC-AUC 0.971 · Paridad scratch↔sklearn corr 0.94.</p>
-                    </div>
-                </a>
-                <!-- 1 — VQC (destacado) -->
-                <a href="https://github.com/derekrex333/Clasificador-Cuantico-Variacional-VQC" target="_blank"
-                    class="project-card-link">
-                    <div class="project-card">
-                        <img src="images/vqc-fronteras.png" alt="Clasificador Cuántico Variacional" class="project-icon"
-                            style="object-fit: cover;">
-                        <h3>Clasificador Cuántico Variacional (VQC)</h3>
-                        <p>Híbrido cuántico-clásico · 2 qubits · Angle encoding + ansatz hardware-efficient.</p>
-                        <p style="font-size:0.92rem; margin-top:0.6rem; opacity:0.9;"><strong>Resultado:</strong> Fronteras no lineales en moons con ~0.80 accuracy (12 params vs 3 de logística). Validación cruzada NumPy↔Q# &lt;1e-6 · Gradientes parameter-shift · Adam/SGD.</p>
-                    </div>
-                </a>
-                <!-- 2 — Eco-Balance -->
-                <a href="https://github.com/derekrex333/GEO_BALANCE" target="_blank" class="project-card-link">
-                    <div class="project-card">
-                        <img src="images/icon-ecobalance.png" alt="Eco-Balance" class="project-icon">
-                        <h3>Eco-Balance</h3>
-                        <p>PWA de monitoreo ecológico con IA — Índice de Salud del Ecosistema (EHI).</p>
-                        <p style="font-size:0.92rem; margin-top:0.6rem; opacity:0.9;"><strong>Resultado:</strong> Dashboard con alertas en tiempo real, modelos de biodiversidad y base de datos integrada para toma de decisiones ambientales.</p>
-                    </div>
-                </a>
-                <!-- 3 — Impacto Recesiones -->
-                <a href="https://github.com/derekrex333/visualization-of-ventas-de-autom-viles" target="_blank"
-                    class="project-card-link">
-                    <div class="project-card">
-                        <img src="images/ventas-autos.png" alt="Impacto de recesiones en ventas" class="project-icon"
-                            style="object-fit: cover;">
-                        <h3>Impacto de Recesiones en Ventas de Automóviles</h3>
-                        <p>Análisis exploratorio 1980-2023 · PIB, desempleo y gasto publicitario.</p>
-                        <p style="font-size:0.92rem; margin-top:0.6rem; opacity:0.9;"><strong>Resultado:</strong> 9 visualizaciones — caídas y alta volatilidad en recesiones evidencian fuerte correlación con el ciclo económico.</p>
-                    </div>
-                </a>
-                <!-- MAS PROYECTOS -->
-                <a href="proyectos.html" class="project-card-link">
-                    <div class="project-card" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; min-height:420px;">
-                        <img src="images/MAS_PROYECTOS.jpg" alt="Más proyectos" class="project-icon" style="max-height:180px; object-fit:cover;">
-                        <h3>MÁS PROYECTOS →</h3>
-                        <p>Ver galería completa con todos los proyectos: análisis en R, C++/Qt, toolkits matemáticos y más.</p>
-                        <span style="margin-top:1rem; display:inline-block; padding:0.7rem 1.6rem; background:linear-gradient(135deg,#00ff87,#00cc6a); color:#000; border-radius:30px; font-weight:700; font-size:0.95rem;">Explorar todos</span>
-                    </div>
-                </a>
             </div>
         </div>
     </section>
 
     <section id="contactame">
         <div class="container">
-            <h2>CONTÁCTAME</h2>
+            <h2 data-i18n="contacto_title">CONTÁCTAME</h2>
+            <p style="text-align:center; opacity:0.8; margin-bottom:1.5rem; max-width:600px; margin-left:auto; margin-right:auto;" data-i18n="contacto_sub">¿Hablamos? Respondo en 24h. Formulario activo vía Formspree ✓ — o escríbeme directo.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:0.8rem; justify-content:center; margin-bottom:2rem;">
+                <a href="files/CV-Derek-Alvirde.pdf" download class="social-btn" style="padding:0.8rem 1.4rem; font-size:0.9rem;" data-i18n="contacto_cv">📄 Descargar CV</a>
+                <a href="https://linkedin.com/in/derek-alvirde" target="_blank" class="social-btn" style="padding:0.8rem 1.4rem; font-size:0.9rem;">LinkedIn</a>
+                <a href="https://github.com/derekrex333" target="_blank" class="social-btn" style="padding:0.8rem 1.4rem; font-size:0.9rem;">GitHub</a>
+                <a href="mailto:Derekjrex@gmail.com" class="social-btn" style="padding:0.8rem 1.4rem; font-size:0.9rem;">Derekjrex@gmail.com</a>
+            </div>
             <form class="contact-form" action="https://formspree.io/f/mzdjeaee" method="POST">
                 <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    <label for="nombre" data-i18n="contacto_nombre_label">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required data-i18n-placeholder="contacto_nombre_ph">
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required data-i18n-placeholder="contacto_email_ph">
                 </div>
                 <div class="form-group">
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    <label for="mensaje" data-i18n="contacto_msg_label">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required data-i18n-placeholder="contacto_msg_ph"></textarea>
                 </div>
-                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                <button type="submit" class="submit-btn" data-i18n="contacto_btn">Enviar Mensaje — Respondo en 24h</button>
                 <p class="form-status" role="status" aria-live="polite" hidden></p>
             </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Alvirde Derek. Todos los derechos reservados.</p>
+        <p>&copy; <span id="year"></span> Alvirde Derek. Todos los derechos reservados.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

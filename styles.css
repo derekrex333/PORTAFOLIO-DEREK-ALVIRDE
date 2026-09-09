@@ -264,6 +264,32 @@ body.dark .toggle-slider {
     box-shadow: var(--shadow-glow);
 }
 
+.lang-toggle {
+    width: 52px;
+    height: 36px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    border: 2px solid;
+    transition: all var(--transition-base);
+}
+body.light .lang-toggle {
+    background: white;
+    color: #047857;
+    border-color: rgba(0,204,106,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+body.dark .lang-toggle {
+    background: var(--color-dark-elevated);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 12px rgba(0,255,135,0.15);
+}
+.lang-toggle:hover { transform: translateY(-2px); }
+
 /* Hero Section - Impactante */
 .hero {
     min-height: 100vh;
@@ -1090,6 +1116,92 @@ body.dark footer::before {
         min-height: auto;
     }
 }
+
+/* Métricas visuales — MotorSense/VQC */
+.metric-grid {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    margin: 1.2rem 0 0.6rem;
+    flex-wrap: wrap;
+}
+.metric {
+    background: rgba(0, 255, 135, 0.08);
+    border: 1px solid rgba(0, 255, 135, 0.2);
+    border-radius: 12px;
+    padding: 0.7rem 1rem;
+    text-align: center;
+    min-width: 105px;
+    flex: 1;
+}
+.metric span {
+    display: block;
+    font-size: 0.7rem;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.2rem;
+}
+.metric strong {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    font-family: var(--font-display);
+}
+.metric-grid-small .metric strong { font-size: 1.05rem; }
+body.light .metric { background: rgba(0,255,135,0.07); border-color: rgba(0,204,106,0.2); }
+body.light .metric strong { color: #047857; }
+.project-human { font-size: 1rem; font-weight: 500; margin-top: 0.6rem; line-height: 1.5; }
+body.dark .project-human { color: var(--color-text-dark); }
+body.light .project-human { color: #065f46; }
+.project-tech-details {
+    margin-top: 0.8rem;
+    background: rgba(0,255,135,0.06);
+    border: 1px solid rgba(0,255,135,0.15);
+    border-radius: 10px;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.85rem;
+    text-align: left;
+}
+.project-tech-details summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    list-style: none;
+}
+body.dark .project-tech-details summary { color: var(--color-primary); }
+body.dark .project-tech-details { border-color: rgba(0,255,135,0.2); }
+/* Stack curado */
+.stack-details {
+    margin-top: 1.5rem;
+    background: rgba(0,255,135,0.05);
+    border: 1px solid rgba(0,255,135,0.15);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+}
+.stack-details summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-family: var(--font-display);
+    color: #047857;
+    text-align: center;
+}
+body.dark .stack-details summary { color: var(--color-primary); }
+.skill-tag-secondary {
+    background: transparent;
+    color: #047857;
+    border-color: rgba(0,204,106,0.35);
+    font-size: 0.8rem;
+}
+body.dark .skill-tag-secondary {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    background: rgba(0,255,135,0.08);
+}
+.project-card-featured {
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 12px 36px rgba(0,255,135,0.2);
+}
+body.dark .project-card-featured { box-shadow: var(--shadow-glow-strong); }
 
 #neural-canvas {
     position: absolute;

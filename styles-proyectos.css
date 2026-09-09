@@ -275,6 +275,31 @@ body.dark .toggle-slider {
     background: var(--color-primary);
     box-shadow: var(--shadow-glow);
 }
+.lang-toggle {
+    width: 52px;
+    height: 36px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    border: 2px solid;
+    transition: all var(--transition-base);
+}
+body.light .lang-toggle {
+    background: white;
+    color: #047857;
+    border-color: rgba(0,204,106,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+body.dark .lang-toggle {
+    background: var(--color-dark-elevated);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 12px rgba(0,255,135,0.15);
+}
+.lang-toggle:hover { transform: translateY(-2px); }
 
 /* Hero Proyectos */
 .hero-projects {
@@ -795,3 +820,7 @@ body.dark footer::before {
         height: 180px;
     }
 }
+
+/* Métricas y capas humanas — alineado con styles.css */
+.project-description[style*="font-weight:600"] { font-weight: 600; }
+.project-insight em { opacity: 0.85; font-style: normal; }

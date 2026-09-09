@@ -17,6 +17,7 @@
             <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
                 <span class="toggle-slider">☀️</span>
             </button>
+            <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma" title="Cambiar idioma / Switch language">ES</button>
         </ul>
     </nav>
 
@@ -39,20 +40,22 @@
         <div class="container">
             <div class="projects-grid">
 
-                <!-- MotorSense -->
-                <div class="project-card">
+                <!-- MotorSense — FEATURED -->
+                <div class="project-card" style="border-color: var(--color-primary);">
                     <img src="images/motorsense-roc.png" alt="MotorSense - Curva ROC diagnóstico predictivo"
                         class="project-image">
                     <div class="project-content">
                         <h3>MotorSense — Diagnóstico Predictivo</h3>
                         <div class="project-meta">
                             <span>⚙️ AI4I 2020 · 10k motores</span>
-                            <span>📉 Recall 86.8%</span>
-                            <span>📈 ROC-AUC 0.97</span>
+                            <span>📉 Recall 15% → 85%</span>
+                            <span>📈 ROC-AUC 0.971</span>
                         </div>
+                        <p class="project-description" style="font-weight:600;">
+                            Evita paradas de fábrica anticipando fallas de motor antes de que ocurran.
+                        </p>
                         <p class="project-description">
-                            ¿Anticipar la falla antes de que pare la línea? Regresión logística
-                            <strong>desde cero</strong> (GD, class_weight, copias defensivas) vs baselines
+                            Regresión logística <strong>desde cero</strong> (GD, class_weight, copias defensivas) vs baselines
                             sklearn sobre dataset desbalanceado (3.4% fallas). Split estratificado 80/20,
                             <em>StandardScaler</em> solo en train y evaluación sin accuracy.
                         </p>
@@ -78,7 +81,7 @@
                     </div>
                 </div>
 
-                <!-- VQC -->
+                <!-- VQC — interés personal, arriba -->
                 <div class="project-card">
                     <img src="images/vqc-fronteras.png" alt="Clasificador Cuántico Variacional - Fronteras de decisión"
                         class="project-image">
@@ -89,6 +92,9 @@
                             <span>🔬 Híbrido cuántico-clásico</span>
                             <span>✅ Paridad &lt;1e-6</span>
                         </div>
+                        <p class="project-description" style="font-weight:600;">
+                            Experimento: ¿puede un chip cuántico de 2 qubits clasificar datos con fronteras curvas mejor que lo clásico?
+                        </p>
                         <p class="project-description">
                             Clasificador híbrido con <strong>angle encoding Ry(x)</strong> y ansatz
                             hardware-efficient (Ry/Rz + CNOT, 12 parámetros con L=3). Doble backend:
@@ -151,32 +157,35 @@
                     </div>
                 </div>
 
-                <!-- Eco-Balance -->
+                <!-- Eco-Balance — Prototipo de concepto (repo GEO_BALANCE) -->
                 <div class="project-card">
                     <img src="images/icon-ecobalance.png" alt="Eco-Balance" class="project-image"
                         style="object-fit: contain; background: #0a0f0d; padding: 1rem;">
                     <div class="project-content">
-                        <h3>Eco-Balance</h3>
+                        <h3>Eco-Balance — Prototipo de concepto <span style="font-size:0.7rem; font-weight:600; background:rgba(0,255,135,0.12); border:1px solid #00ff87; padding:0.15rem 0.5rem; border-radius:999px; vertical-align:middle;">repo: GEO_BALANCE</span></h3>
                         <div class="project-meta">
-                            <span>🌱 PWA</span>
-                            <span>🤖 IA ambiental</span>
-                            <span>📈 EHI</span>
+                            <span>🌱 Prototipo</span>
+                            <span>🤖 EHI</span>
+                            <span>📊 Dashboard</span>
                         </div>
+                        <p class="project-description" style="font-weight:600;">
+                            Prototipo de dashboard que calcula un Índice de Salud del Ecosistema (EHI) para decisiones ambientales.
+                        </p>
                         <p class="project-description">
-                            PWA de monitoreo ecológico con IA. Cálculo del Índice de Salud del Ecosistema (EHI),
-                            modelos de biodiversidad/sostenibilidad, alertas en tiempo real e integración con BD.
+                            <em>Live en Render ✓</em> — modelos de biodiversidad/sostenibilidad, alertas en tiempo real e integración con BD.
                         </p>
                         <p class="project-insight">
-                            <strong>Resultado:</strong> Dashboard para decisiones ambientales y conciencia ecológica proactiva.
+                            <strong>Resultado:</strong> Dashboard desplegado — <a href="https://ecobalance-khxn.onrender.com/" target="_blank">ecobalance-khxn.onrender.com</a> — código abierto para iterar.
                         </p>
                         <div class="project-tags">
                             <span class="project-tag">PWA</span>
                             <span class="project-tag">IA</span>
                             <span class="project-tag">JavaScript</span>
                             <span class="project-tag">Python</span>
+                            <span class="project-tag">Render</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://github.com/derekrex333/GEO_BALANCE" target="_blank" class="btn-view">Ver proyecto</a>
+                            <a href="https://ecobalance-khxn.onrender.com/" target="_blank" class="btn-view">🌐 Ver Demo Live</a>
                             <a href="https://github.com/derekrex333/GEO_BALANCE" target="_blank" class="btn-github">GitHub</a>
                         </div>
                     </div>
@@ -309,7 +318,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 Alvirde Derek. Todos los derechos reservados.</p>
+        <p>&copy; <span id="year"></span> Alvirde Derek. Todos los derechos reservados.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
